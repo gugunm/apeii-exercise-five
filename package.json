@@ -1,0 +1,14 @@
+{
+    "name": "exercise-5",
+    "private": true,
+    "scripts": {
+        "dev": "pnpm -r --parallel dev",
+        "build": "pnpm -r build",
+        "typecheck": "pnpm -r typecheck",
+        "evals:1": "pnpm -C packages/agents exec node --env-file-if-exists=../../.env --import tsx src/evals/working-time.ts",
+        "evals:2": "pnpm -C packages/agents exec node --env-file-if-exists=../../.env --import tsx src/evals/leave.ts",
+        "evals:3": "pnpm -C packages/agents exec node --env-file-if-exists=../../.env --import tsx src/evals/payroll.ts",
+        "evals:4": "pnpm -C packages/agents exec node --env-file-if-exists=../../.env --import tsx src/evals/benefits-employment.ts",
+        "evals": "pnpm evals:1 && pnpm evals:2 && pnpm evals:3 && pnpm evals:4"
+    }
+}

@@ -1,0 +1,9 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+overrides:
+  node-releases: 2.0.58
+
+allowBuilds:
+  esbuild: true
